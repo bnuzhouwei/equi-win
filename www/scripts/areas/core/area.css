@@ -1,0 +1,369 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.428;
+}
+#corebody * {
+}
+
+.h1 {
+    font-size: 36px;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+.h3 {
+    font-size: 24px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+.h5 {
+    font-size: 14px;
+}
+
+.h6 {
+    font-size: 12px;
+}
+
+.dd-gridbutton, .dd-button, .dd-cfmbtn {
+}
+
+
+.dd-element-body span.mini-textbox, .dd-element-body span.mini-buttonedit {
+    height: 26px;
+    line-height: 26px;
+}
+
+.dd-element-body span.mini-buttonedit-border, .dd-element-body span.mini-textbox-border {
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid gray;
+}
+
+.dd-element-body input.mini-textbox-input, .dd-element-body input.mini-buttonedit-input {
+    line-height: 24px;
+    height: 24px;
+    vertical-align: central;
+}
+
+.dd-element-body span.mini-textarea span.mini-textbox-border {
+    height: auto;
+}
+
+.dd-element-body textarea {
+    line-height: 1.5em;
+}
+
+.dd-element-body * {
+    font-size: 14px;
+}
+
+
+.dd-form {
+    background-color: white;
+    font-size: 14px;    
+    margin-right:10px;
+    padding-bottom: 50px;
+}
+
+    .dd-form.detail .mini-textbox-input {
+    }
+
+    .dd-form .dd-form-header {
+        padding-bottom: 9px;
+        margin: 10px 0 20px 0px;
+        border-bottom: 1px solid #eee;
+        font-family:'Microsoft YaHei';
+    }
+
+    .dd-form .dd-form-fsm{
+        margin-left:137px;
+    }
+
+        .dd-form .dd-form-header .dd-form-name {
+            margin-left:137px;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .dd-form .dd-form-header .dd-form-desc {
+            display: inline-block;
+            color: #737373;
+            font-size:14px;
+            line-height:1.5em;
+            font-weight:400;
+        }
+
+    .dd-form .dd-element {
+        margin-top:0.5em;
+        margin-bottom: 1.5em;
+        font-family:'Microsoft YaHei';
+    }
+
+    .dd-form .dd-form-tabs .mini-tabs-firstSpace {
+        padding-left: 138px;
+    }
+
+    .dd-form .dd-form-fsm-tabs .mini-tabs-firstSpace {
+        padding-left: 138px;
+    }
+
+        .dd-form .dd-element .dd-element-name {
+            font-size: small;
+            text-align: right;
+            width: 120px;
+            float: left;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .dd-form .dd-element .dd-element-body {
+            font-size: 1em;
+            margin-left: 135px;
+        }
+
+        .dd-form .dd-element .dd-element-tips {
+            margin-left: 135px;
+            font-size: small;
+            font-weight: normal;
+            color: #737373;
+            margin-top: 5px;
+        }
+
+    .dd-form .dd-form-footer {
+        position: fixed;
+        background-color: #eee;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1000;
+        line-height: 40px;
+        height: 40px;
+        margin: 0px auto;
+        border: 1px solid #ccc;
+        padding-left:135px;
+    }
+    .dd-form .dd-form-toolbar {
+        display: none;
+    }
+
+span.icon-tip {
+    padding-left: 1.5em;
+}
+
+span.dd-element-number {
+    width: 2em;
+    display: inline-block;
+    text-align: center;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.dd-form div.mini-errorIcon {
+    height: 2em;
+    line-height: 2em;
+}
+
+.mini-list-inner {
+    margin-right: 1em;
+}
+
+.asLabel .mini-textbox-border,
+.asLabel .mini-textbox-input,
+.asLabel .mini-buttonedit-border,
+.asLabel .mini-buttonedit-input,
+.asLabel .mini-textboxlist-border {
+    border: 0;
+    background: none;
+    cursor: default;
+}
+
+.asLabel .mini-buttonedit-button,
+.asLabel .mini-textboxlist-close {
+    display: none;
+}
+
+.asLabel .mini-textboxlist-item {
+    padding-right: 8px;
+}
+
+table.nvd {
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table.nvd td {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+    }
+
+table.table-bordered {
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table.table-bordered td, table.table-bordered th {
+        border: 1px solid gray;
+        border-collapse: collapse;
+        padding: 0.3em 0.5em 0.3em 0.5em;
+    }
+
+div.ProgressBar {
+    width: 100px;
+    padding: 0;
+    border: 1px solid black;
+    margin-right: 1em;
+    height: .75em;
+    margin-left: 1em;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+    div.ProgressBar div {
+        background-color: Green;
+        font-size: 1pt;
+        height: 100%;
+        float: left;
+    }
+
+span.asyncUploader OBJECT {
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.dd-survey {
+    width: 960px;
+    margin: 0 auto;
+    font-family:'Microsoft YaHei';
+}
+
+    .dd-survey * {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .dd-survey .dd-survey-title {
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+    .dd-survey .dd-survey-desc {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom:10px;
+    }
+
+    .dd-survey .dd-survey-buttons {
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        background-color:#eee;
+    }
+
+        .dd-survey .dd-survey-buttons span.dsb {
+            display: inline-block;
+            width: 100px;
+        }
+
+    .dd-survey .dd-element {
+        margin-bottom: 1.5em;        
+    }
+
+        .dd-survey .dd-element .dd-element-name {
+            font-size: 1em;
+            margin-bottom:0.5em;
+            font-weight:bold;
+            font-family:'Microsoft YaHei';
+        }
+
+        .dd-survey .dd-element .dd-element-body {
+            font-size: 1em;
+            margin-left:2.3em;
+            margin-right:1em;
+        }
+
+        .dd-survey .dd-element .dd-element-tips {
+            font-family:'Microsoft YaHei';
+            margin-left:2.3em;
+            font-size: small;
+            font-weight: normal;
+            color: #737373;
+            margin-top: 5px;
+        }
+
+        .dd-survey .dd-element label {
+            font-size: 1em;
+        }
+
+        .dd-survey .dd-element .dd-element-body table.dd-tablecontrol {
+            width: 100%;
+        }
+
+.dd-completion .mini-textbox-border {
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+
+.mini-required .mini-textbox-border, .mini-required .mini-buttonedit-border {
+    background-color: #fffff8;
+}
+
+span.dd-kindeditor-filedialog {
+    width: 100%;
+}
+
+    span.dd-kindeditor-filedialog .dd-kindeditor-filedialog-text {
+        width: 300px;
+        line-height: 19px;
+        height: 19px;
+    }
+    span.dd-kindeditor-filedialog .dd-kindeditor-filedialog-button {
+
+    }
+
+td.mini-tab-active {
+    background-color: #f5f5f5;
+}
+
+.dd-dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100000;
+    position: absolute;
+    background-color: white;
+    line-height: 24px;
+}
+
+.mini-tabs-firstSpace div{
+    width:0px;
+}
+
+.mini-tabs-bodys{
+    padding-left:0;
+    padding-right:0;
+    border:0;
+}
+
+.dd-monacoeditor{
+    border: 1px solid #eee;
+}

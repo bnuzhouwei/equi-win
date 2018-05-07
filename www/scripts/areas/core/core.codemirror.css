@@ -1,0 +1,35 @@
+﻿.CodeMirror {
+    border: 1px solid gray;
+    height: auto;
+    font-family: Consolas;
+    font-size: 15px;
+    line-height: 1.4em;
+    width:99%;
+}
+
+.CodeMirror-scroll {
+    overflow-y: hidden;
+}
+
+.cm-s-default .cm-keyword {
+}
+
+.cm-s-default .cm-variable {
+}
+
+.cm-s-default .cm-variable-2 {
+}
+
+.CodeMirror-matchingbracket {
+    color: inherit;
+    background: rgba(255, 150, 0, .3);
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: black;
+    font-weight: bold;
+}
+
+.CodeMirror-focused .cm-matchhighlight {
+    background-color:#eee;
+}

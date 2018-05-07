@@ -1,0 +1,299 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    line-height:2;
+    background-color:#eee;
+    font-size:13px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:focus {
+    outline: 1px dotted;
+}
+
+hr {
+    border: 0 #ccc solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+
+/* `Headings
+----------------------------------------------------------------------------------------------------*/
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 19px;
+}
+
+h5 {
+    font-size: 17px;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+/* `Spacing
+----------------------------------------------------------------------------------------------------*/
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    list-style: disc;
+}
+
+li {
+    margin-left: 30px;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+    
+}
+/* clearfix */
+.clearfix:after, .row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix, .row {
+    display: inline-block;
+}
+/*Those two .clearfix have to be separate!)*/
+.clearfix, .row {
+    display: block;
+}
+
+/* gridframework */
+.row {
+    position: relative;
+    margin-left: -10px;
+}
+
+.gu1 .row {
+    width: 57px;
+}
+
+.gu2 .row {
+    width: 114px;
+}
+
+.gu3 .row {
+    width: 171px;
+}
+
+.gu4 .row {
+    width: 228px;
+}
+
+.gu5 .row {
+    width: 285px;
+}
+
+.gu6 .row {
+    width: 342px;
+}
+
+.gu7 .row {
+    width: 399px;
+}
+
+.gu8 .row {
+    width: 456px;
+}
+
+.gu9 .row {
+    width: 513px;
+}
+
+.gu10 .row {
+    width: 570px;
+}
+
+.gu11 .row {
+    width: 627px;
+}
+
+.gu12 .row {
+    width: 684px;
+}
+
+.col {
+    padding-left: 10px;
+    float: left;
+    position: relative;
+}
+
+.gu1 {
+    width: 47px;
+}
+
+.gu2 {
+    width: 104px;
+}
+
+.gu3 {
+    width: 161px;
+}
+
+.gu4 {
+    width: 218px;
+}
+
+.gu5 {
+    width: 275px;
+}
+
+.gu6 {
+    width: 332px;
+}
+
+.gu7 {
+    width: 389px;
+}
+
+.gu8 {
+    width: 446px;
+}
+
+.gu9 {
+    width: 503px;
+}
+
+.gu10 {
+    width: 560px;
+}
+
+.gu11 {
+    width: 617px;
+}
+
+.gu12 {
+    width: 674px;
+}
+
+.container{
+    width: 674px;
+    margin:0 auto;
+    background-color:white;
+    padding: 60px;
+}
+
+.page {
+    height: 1002.5px;
+    width: 674px;
+    margin:0 auto;
+    background-color:white;
+    padding: 60px;
+    border-bottom: 1px dashed gray;
+    overflow:hidden;
+    page-break-after: always;
+}
+
+.page-auto{
+    width: 674px;    
+    margin:0 auto;
+    min-height: 1000.5px;
+    background-color:white;
+    padding: 60px;
+    page-break-after: always;
+}
+
+.htmltopdf .page{
+    height: 1003.5px;
+    width: 674px;
+    margin:0 auto;
+    background-color:white;
+    padding:0;
+    border:0;
+    page-break-after: always;
+}
+
+.htmltopdf .page-auto {
+    width: 674px;
+    margin: 0 auto;
+    background-color: white;
+    padding:0;
+    border:0;
+    page-break-after: always;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    padding-top:1em;
+}
+
+.table {
+    width: 100%;
+}
+.table thead{
+    font-weight:bold;
+    text-align:center;
+}
+
+    .table-bordered th,.table-bordered td {
+        border: 1px solid black;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    th.page-title {
+        border-top:0;
+        border-left:0;
+        border-right:0;
+    }
