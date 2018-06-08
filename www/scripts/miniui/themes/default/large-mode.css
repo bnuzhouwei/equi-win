@@ -1,17 +1,48 @@
-﻿body
+﻿.mini-widget, body, 
+.mini-button, .mini-menuitem, .mini-layout-region-header, .mini-panel-header,
+.mini-outlookbar-groupHeader,
+.mini-grid-headerCell, .mini-grid-cell, .mini-grid-columnproxy,
+.mini-listbox td,
+.mini-calendar, .mini-calendar-button,
+.mini-tabs, 
+.mini-tree,
+.mini-textbox-input,
+.mini-buttonedit-input,
+.mini-textboxlist-input,
+.mini-textboxlist,
+.mini-pager,
+.mini-checkboxlist table label, .mini-radiobuttonlist table label,
+.mini-checkbox,
+.mini-checkboxlist, .mini-radiobuttonlist, .mini-radiobuttonlist label,
+.mini-layout,
+.mini-calendar, .mini-calendar-menu-month, mini-calendar-date, mini-calendar-menu-year, .mini-calendar-title
 {
     font-size:14px;
-    line-height:1.4;    
+}
+
+.mini-icon
+{
+    font-size:18px;
+    line-height:18px;
+    /*min-height:18px;*/
+}
+
+.mini-menuitem-allow, .mini-menu-horizontal .mini-menuitem-allow,
+.mini-button-allow,
+.mini-buttonedit-icon,
+.mini-iconfont
+{
+    line-height:16px;
 }
 
 /* button
 ==========================================*/
 .mini-button
 {
-    font-size:13px;
+    font-size:14px;
     line-height:16px;
 }
-.mini-button-text
+.mini-button-inner
 {   
     padding:5px 12px 7px 12px;
     padding:6px 12px 6px 12px\9;
@@ -31,7 +62,7 @@
 }
 .mini-button .mini-button-icon-only .mini-button-icon
 {    
-    left:8px;    
+    left:9px;    
 }
 .mini-button-iconRight .mini-button-icon-text
 {
@@ -112,10 +143,12 @@
 {
     height:24px;
     width:22px;
+    line-height:24px;
 }
 .mini-buttonedit-close
 {
     height:24px;
+    line-height:24px;
 }
 /*.mini-buttonedit-up span, .mini-buttonedit-down span
 {
@@ -187,9 +220,13 @@
     font-size:14px;
     padding: 6px 8px 6px 8px;
 }
-
+.mini-listbox .mini-listbox-checkbox
+{
+    width:26px;
+}
 /* grid
 ==========================================*/
+
 .mini-grid-cell-inner
 {
     padding-top:6px;
@@ -198,8 +235,8 @@
 }
 .mini-grid-headerCell-inner
 {
-    padding-top:8px;
-    padding-bottom:8px;
+    padding-top:6px;
+    padding-bottom:6px;
   
     font-size:14px;
 }
@@ -229,20 +266,19 @@
 }
 .mini-tree .mini-tree-icon
 {         
-    top:-2px;
+    top:-1px;
 }
 .mini-tree-nodeshow
 {
-    padding:3px;
-    padding-left:4px;
-    padding-right:5px;
+    padding:3px 5px 2px 4px;
 }
 .mini-tree-node-hover .mini-tree-nodeshow,
 .mini-tree-selectedNode .mini-tree-nodeshow
 {
-    padding:2px;
+    /*padding:2px;
     padding-left:3px;
-    padding-right:4px; 
+    padding-right:4px; */
+    padding:3px 5px 2px 4px;
 }
 .mini-tree-nodetext
 {
@@ -258,14 +294,18 @@
 ==========================================*/
 .mini-pager
 {
-    height:30px;
+    min-height:30px;
     line-height:30px;
     padding:6px 10px 6px 8px;   
 }
 body .mini-pager-num
 {
-    height:22px;
-    line-height:22px;
+    height:28px;
+    line-height:26px;
+}
+.mini-pager-size .mini-combobox
+{
+    width:60px;
 }
 
 /* toolbar
@@ -295,7 +335,7 @@ body .mini-pager-num
 }
 .mini-panel .mini-tools
 {
-    top:14px;
+    top:11px;
     right:10px;
 }
 .mini-panel-body
@@ -371,11 +411,13 @@ body .mini-pager-num
 {
     left:10px;
     top:6px;
+    line-height:16px;
 } 
 .mini-menuitem-allow
 {
     top:6px;
     right:6px;    
+    line-height:16px;
 }
 .mini-menu-horizontal .mini-menu-inner
 {
@@ -409,14 +451,15 @@ body .mini-pager-num
 }
 .mini-tab-close
 {
-    margin-top:8px;
+    /*margin-top:8px;*/
 }
 .mini-tabs-tabmenu
 {
     top:7px;
     right:4px;
     width:22px;
-    height:22px;    
+    height:26px;   
+    line-height:24px; 
     margin-right:6px;
 }
 .mini-tabs-nav,
@@ -429,15 +472,28 @@ body .mini-pager-num
 .mini-tabs-leftButton, .mini-tabs-rightButton
 {    
     width:22px;
-    height:22px;
+    height:26px;
+    line-height:24px;
     margin-right:6px;
 }
 .mini-tabs-buttons
 {
-    padding-top:6px;
+    /*padding-top:6px;*/
 }
 /* calendar
 ==========================================*/
+.mini-calendar-menu-years
+{
+    text-align:center;
+}
+.mini-calendar-menu-month 
+{
+    width:40px;
+}
+.mini-calendar-menu-year 
+{
+    width:40px;
+}
 .mini-calendar,
 .mini-calendar-title,
 .mini-calendar-menu-month,
@@ -461,7 +517,7 @@ body .mini-pager-num
 body .mini-calendar td.mini-calendar-date
 {
     line-height:16px;
-    padding:3px 8px;
+    padding:5px 10px;
 }
 body .mini-calendar .mini-calendar-daysheader td
 {
@@ -479,6 +535,25 @@ body .mini-calendar .mini-calendar-daysheader td
 .mini-calendar-menu-year
 {
     padding:2px 2px;
+}
+
+
+body .mini-calendar-menu-month,
+body .mini-calendar-menu-year
+{
+    width:62px;    
+    height:28px;
+    line-height:26px;
+}
+body .mini-calendar-menu-year
+{
+    width:46px;
+    height:28px;
+    line-height:26px;    
+}
+.mini-calendar-timespinner
+{
+    width:85px;
 }
 
 /* progressbar

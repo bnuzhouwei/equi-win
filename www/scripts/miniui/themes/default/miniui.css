@@ -1,4 +1,17 @@
-﻿html
+﻿
+*,
+*:before,
+*:after{    
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
+
+html
 {
     padding:0;border:0;margin:0;
     width:100%;height:100%;   
@@ -19,7 +32,20 @@ table
     background:url(images/header.gif) repeat-x 0 -1px;
 }
 
-.mini-iconfont
+.mini-button-icon,
+.mini-button-allow,
+.mini-menuitem-icon,
+.mini-menuitem-allow
+{
+    line-height:16px;
+    text-align:center; 
+}
+
+
+
+
+
+.mini-iconfont, .mini-icon
 {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -30,7 +56,7 @@ table
     transform: translate(0, 0);
     font-size: 16px;
     line-height: 16px;
-    text-align:center;
+    text-align:left;
 }
     
 .mini-disabled {
@@ -76,6 +102,7 @@ html,body{_background-image:url(about:blank);_background-attachment:fixed;}
 	-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 	filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2,MakeShadow=false,ShadowOpacity=0.3);
 	z-index:99;
+	display:none !important;
 }
 
 .mini-popup
@@ -127,6 +154,9 @@ body .mini-fixed
 	height:100%;
 	background:#ccc;opacity: .3;-moz-opacity: .3;filter: alpha(opacity=30);
 }
+
+
+
 .mini-mask-msg{
 	position:absolute;
 	cursor:wait;
@@ -152,13 +182,20 @@ body .mini-fixed
 }
 .mini-tools span
 {
-    display:inline-block;   
     width:15px;
     height:15px;
     overflow:hidden;    
     cursor:pointer;
-    margin-left:2px;
 }
+
+.mini-tools span,
+.mini-tools a
+{
+    display:inline-block;   
+    margin-left:2px;
+    vertical-align:middle;
+}
+
 .mini-tools-close
 {
     background:url(images/tools/close.gif) no-repeat 50% 1px;
@@ -226,8 +263,11 @@ body .mini-toolbar a.mini-button-disabled, body .mini-toolbar a:hover.mini-butto
 { 
     cursor:default;    
     background:none;    
-    border:0;
-    padding:1px;
+    
+    
+    border-color:transparent;
+    *border-width:0;
+    *padding:1px;
 }
 body .mini-toolbar .mini-button-disabled .mini-button-text, body .mini-toolbar a:hover.mini-button-disabled .mini-button-text
 {
@@ -238,8 +278,9 @@ body .mini-toolbar a.mini-button-disabled, body .mini-toolbar a:hover.mini-butto
 body .mini-pager a.mini-button-disabled, body .mini-pager a:hover.mini-button-disabled
 {  
     background:transparent;
-    border:0;
-    padding:1px;    
+    border-color:transparent;
+    *border-width:0;
+    *padding:1px;    
 }
 
 
@@ -579,7 +620,7 @@ body .mini-labelfield-checkboxlist
   clear: both;
 }
 .mini-clearfix,            
-.mini-row,
+.mini-row
 {
     *zoom:1;    
 }
@@ -695,33 +736,42 @@ body a:hover.mini-button
 
 
 
-.mini-button-text
+.mini-button-inner
 {   
     position:relative;
     
     line-height:16px; 
-	padding:2px 8px 4px 8px;
+	padding:4px 8px 3px 8px;
 	
     line-height:17px\9;
     
     display:inline-block;    
-    padding:3px 8px 2px 8px\9;    
+    padding:3px 8px 2px 8px\9;
     +padding:3px 8px 2px 8px;  
     _padding:2px 8px 2px 8px;  
     
     vertical-align:baseline;
 }
 
+.mini-button-text
+{
+    
+}
 .mini-button-icon
 {
     position:absolute;left:5px;top:50%;
-    width:18px;height:18px;overflow:hidden;
-    margin-top:-9px;
-    +margin-top:-10px;
     
-    line-height:18px;
-    line-height:16px\9;    
+    min-width:16px;min-height:16px;
+    overflow:hidden;
+    margin-top:-8px;
+    +margin-top:-8px;
+    
+    line-height:16px;
+    
 }
+
+
+
 
 .mini-button .mini-button-icon
 {    
@@ -751,6 +801,15 @@ body .mini-button-plain
 }
 
 
+body .mini-button-plain
+{    
+    border:1px solid transparent;
+    padding:0;
+    
+    *border:0;
+    *padding:1px;
+}
+
 body .mini-button-pressed, body a:hover.mini-button-pressed,
 body .mini-button-checked, body a:hover.mini-button-checked,
 body a.mini-button-popup, body a:hover.mini-button-popup
@@ -760,6 +819,14 @@ body a.mini-button-popup, body a:hover.mini-button-popup
     color:#3C3C3C;
     background:#DBDDE2 url(images/button/pressed.png) repeat-x 0 0; 
     cursor:pointer;   
+}
+
+
+
+body a:hover.mini-button
+{    
+    padding:0px;
+    border:1px solid #A9ACB5;
 }
 
 
@@ -778,6 +845,8 @@ body .mini-button-disabled *
     -moz-opacity: .7;
     filter: alpha(opacity=70);        
 }
+
+
 
 
 
@@ -836,6 +905,7 @@ body .mini-button-disabled *
     background:url(images/button/split_arrow.png) no-repeat 0px 50%;
 }
 
+
 .mini-checkbox
 {
     font-size:9pt;
@@ -858,6 +928,7 @@ body .mini-button-disabled *
     display:inline-block;    
     background:url(images/icons/checkbox.gif) no-repeat 0 0;
     overflow:hidden;
+    cursor:pointer;
 }
 
 .mini-checkbox-checked .mini-checkbox-icon
@@ -915,6 +986,7 @@ body .mini-button-disabled *
     padding:0;
     outline:none;
     float:left;
+    
     _position:absolute;
     _left:2px;
     _top:0px;
@@ -1050,6 +1122,12 @@ body .mini-invalid .mini-buttonedit-border
     
     
 }
+.mini-buttonedit .mini-buttonedit-input
+{
+    padding: 0;
+    margin:0;
+    border: 0;     
+}
 
 .mini-buttonedit input::-ms-clear,
 .mini-textbox input::-ms-clear
@@ -1084,6 +1162,27 @@ body .mini-invalid .mini-buttonedit-border
     padding:0;
     background:#dde6fe url(images/buttonedit/hover.png) repeat-x 0 0;   
 }
+
+
+.mini-buttonedit-button, .mini-buttonedit-close
+{    
+    border:1px solid transparent;
+    padding:0;  
+        
+    _border:0px;
+    _padding:1px;
+}
+.mini-buttonedit-button-hover,
+.mini-buttonedit-hover .mini-buttonedit-trigger
+{
+    border:1px solid #ababab;
+    padding:0;
+    
+    _border:1px solid #ababab;
+    _padding:0;  
+}
+
+
 .mini-buttonedit-button-pressed,
 .mini-buttonedit-popup .mini-buttonedit-trigger
 {
@@ -1273,6 +1372,7 @@ input.mini-textarea
     padding-top:0px\9;
     float:left;
     line-height:16px;
+    font-weight:bold;
 }
 .mini-panel .mini-panel-icon
 {
@@ -1364,6 +1464,11 @@ input.mini-textarea
     cursor:move;
 }
 
+.mini-window-max
+{
+    position:fixed!important;
+}
+
 
 .mini-messagebox-content
 {
@@ -1382,6 +1487,7 @@ input.mini-textarea
     padding:8px;padding-right:40px;padding-left:0px;text-align:center;
     white-space:nowrap;
 }
+
 .mini-messagebox-buttons
 {
     text-align:center;
@@ -1591,17 +1697,16 @@ input.mini-textarea
 {
     background:none;
 }
+
 .mini-tabs
 {
     overflow:hidden;
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;   
+    
     position:relative;         
 }
 .mini-tabs-table
 {
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;   
+    
         
     border-collapse:collapse;
     border-collapse:separate;
@@ -1651,15 +1756,16 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
 {
     width:auto;
     overflow:hidden;
+    
 }
 
 .mini-tabs-position-top .mini-tabs-header
 {
-    margin-top:1px;
+    margin-top:2px;
 }
 .mini-tabs-position-bottom .mini-tabs-header
 {
-    margin-bottom:1px;
+    margin-bottom:2px;
 }
 
 .mini-tabs-position-top .mini-tabs-plain .mini-tabs-header
@@ -1756,7 +1862,7 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
     border-bottom:solid 1px white;
     background:white;
     cursor:default;
-     
+    font-weight:bold;
 }
 .mini-tab-body
 {
@@ -1788,8 +1894,8 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
     display:inline-block;
     width:13px;height:13px;    
     vertical-align:top;
-    margin-top:1px;
-
+    margin-top:2px;
+    
     background:url(images/tabs/close.gif) no-repeat 3px 3px;
     cursor:pointer;
     
@@ -1851,6 +1957,12 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
     border-bottom:0;
 }
 
+
+.mini-tabs-header-left .mini-tabs-header,
+.mini-tabs-header-right .mini-tabs-header
+{
+    min-width:75px;
+}
 
 .mini-tabs-header-left
 {
@@ -1990,7 +2102,7 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
 {
     background:#ebebee url(images/tabs/down.gif) no-repeat 50% 50%;
     display:none;
-    height:15px;width:17px;
+    min-width:16px;min-height:16px;    
     position:absolute;top: 4px;
     border:1px solid #adadad;
     z-index: 1000;
@@ -1999,7 +2111,7 @@ body .mini-tabs-position-bottom .mini-tabs-plain .mini-tabs-scrollCt
 {
     border:solid 1px #adadad;
     background:#EBEBEE url(images/tabs/allow_left.gif) no-repeat 50% 50% ;    
-    width:16px;height:15px;    
+    min-width:16px;min-height:16px;    
     cursor:pointer;
     outline:none;
     display:inline-block;margin-right:2px;
@@ -2012,6 +2124,31 @@ a:hover.mini-tabs-leftButton,a:hover.mini-tabs-rightButton
 {
     background-color:#E1E8FD;
 }
+
+
+
+.mini-tabs-header-top .mini-tab
+{
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+}
+.mini-tabs-header-bottom .mini-tab
+{
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+}
+.mini-tabs-header-left .mini-tab
+{
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+}
+.mini-tabs-header-right .mini-tab
+{
+    border-bottom-left-radius:0;
+    border-top-left-radius:0;
+}
+
+
 .mini-splitter
 {
     width:300px;
@@ -2149,6 +2286,9 @@ a:hover.mini-tabs-leftButton,a:hover.mini-tabs-rightButton
     width:auto;
     height:100%;
     overflow:hidden;
+    border-style:solid;
+    border-width:1px;
+    border-color:#999999;
 }
 .mini-layout-split
 {
@@ -2214,6 +2354,7 @@ a:hover.mini-tabs-leftButton,a:hover.mini-tabs-rightButton
 .mini-layout-region-title
 {    
     float:left;    
+    font-weight:bold;
 }
 .mini-layout-region-icon
 {
@@ -2443,6 +2584,25 @@ a:hover.mini-tabs-leftButton,a:hover.mini-tabs-rightButton
     background:#DBDDE2 url(images/menu/pressed.png) repeat-x 0 0;
 }
 
+
+.mini-menuitem
+{
+    border:1px solid transparent;
+    padding:0;
+    
+    *border:0;
+    *padding:1px;  
+}
+.mini-menuitem-hover, .mini-menu-popup, .mini-menuitem-selected
+{    
+    border:solid 1px #9a9a9a;     
+    padding:0;
+    
+    *border:solid 1px #9a9a9a;     
+    *padding:0px;    
+}
+
+
 .mini-menuitem-inner
 {
     position:relative;
@@ -2663,8 +2823,7 @@ body .mini-menuitem-icontop .mini-menuitem-text
 {    
     border:1px solid #999999;
        
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;      
+    
     border-collapse:collapse;
     border-collapse:separate;  
     
@@ -2691,8 +2850,7 @@ body .mini-calendar td
 {
     padding:4px;
     border-bottom:solid 1px #CFCFCF;
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;      
+    font-size:9pt;   
     cursor:default;
     font-weight:400;
     text-align:center;
@@ -2712,8 +2870,7 @@ body .mini-calendar td
     padding:3px;
     padding-left:4px;
     padding-right:4px;
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;      
+    
     cursor:default;
 }
 .mini-calendar .mini-calendar-weekend
@@ -2757,9 +2914,10 @@ body .mini-calendar td
 {
     line-height:25px;
     font-weight:400;
-    font-size:12px;
+    
     cursor:pointer;
     position:relative;
+    font-weight:bold;
 }
 .mini-calendar-prev, .mini-calendar-next
 {
@@ -2810,14 +2968,13 @@ body .mini-calendar td
     left:0;
     bottom:0;
     width:100%;
-    padding:0;
-    padding-top:8px;
-    padding-bottom:8px;    
+    padding:4px;    
+    padding-bottom:5px;    
 }
 .mini-calendar-footerSpace
 {    
     display:inline-block;
-    width:10px;
+    width:8px;
 }
 .mini-calendar-tadayButton, .mini-calendar-clearButton,
 .mini-calendar-okButton, .mini-calendar-cancelButton
@@ -2827,8 +2984,7 @@ body .mini-calendar td
     color:#201F35;    
     
     display:inline-block;    
-    font-size:9pt;
-    font-family:Tahoma,Verdana,宋体;
+    
     text-decoration:none;
     padding:3px;
     padding-left:0px;
@@ -2847,7 +3003,7 @@ body a:hover.mini-calendar-okButton, body a:hover.mini-calendar-cancelButton
 
 .mini-calendar-okButton
 {
-    margin-left:10px;
+    
 }
 .mini-calendar-okButton, .mini-calendar-cancelButton
 {
@@ -2883,13 +3039,12 @@ body a:hover.mini-calendar-okButton, body a:hover.mini-calendar-cancelButton
 }
 .mini-calendar-menu-month
 {
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;       
+    
     display:inline;
     float:left;        
     text-align:center;
-    width:46px;height:22px;
-    line-height:22px;    
+    width:48px;height:22px;
+    line-height:20px;    
     color:#000000;
     text-decoration:none;
     border:solid 1px white;
@@ -2907,19 +3062,18 @@ a:hover.mini-calendar-menu-month
     margin-left:5px;
     margin-right:5px;
     padding-left:15px;
-    padding-right:15px;
+    padding-right:13px;
     position:relative;
     height:50px;
     margin-bottom:5px;
 }
 .mini-calendar-menu-year
 {
-    font-size:9pt;
-    font-family:Tahoma, Verdana, 宋体;       
+    
     display:inline;
     float:left;
     text-align:center;
-    width:32px;height:21px;
+    width:36px;height:21px;
     margin-bottom:2px;
     line-height:20px;    
     color:#000000;
@@ -2954,6 +3108,19 @@ a:hover.mini-calendar-menu-year
     background:#e2ecf7;
     border:solid 1px #999999;
 }
+
+
+.mini-calendar-timespinner
+{
+    width:85px;
+    display:inline-block;
+    float:left;
+}
+
+.mini-calendar-hastime
+{
+    text-align:right;
+}
 .mini-listbox
 {                
     overflow:hidden;
@@ -2964,6 +3131,7 @@ a:hover.mini-calendar-menu-year
     border:1px solid #999999;    
     overflow:hidden;
     border-spacing: 1px;
+    background:white;
 }
 .mini-listbox td
 {
@@ -3147,6 +3315,8 @@ a:hover.mini-calendar-menu-year
     width:13px;height:13px;    
     display:inline-block;    
     background:url(images/icons/checkbox.gif) no-repeat 0 0;
+    cursor:pointer;
+    
 }
 
 .mini-radiobuttonlist-item .mini-list-icon
@@ -3427,27 +3597,30 @@ a:hover.mini-calendar-menu-year
 {
     overflow: hidden;
     padding:0px;
-    border:0;
-    border-right:#d2d2d2 1px solid;
-    border-bottom:#d2d2d2 1px solid;
+    
+    border:#d2d2d2 1px solid;
+    border-left-width:0px;
+    border-top-width:0px;
+    
     cursor:default;    
     text-align:left;   
     overflow:hidden;
     _text-overflow:ellipsis; 
     
     padding-left:4px;	
-    padding-right:4px;        
-}
-.mini-grid-summaryCell
-{
-    border-bottom:0;
-    border-top:#d2d2d2 1px solid;
-}
-.mini-grid-cell-inner, .mini-grid-headerCell-inner
-{
+    padding-right:4px;
+    
     font-size:9pt;
     font-family:Tahoma, Verdana, 宋体;
-    line-height:18px;    
+    line-height:18px;                
+}
+
+
+
+
+.mini-grid-cell-inner, .mini-grid-headerCell-inner
+{
+
     padding:0px;
     padding-top:3px;
     padding-bottom:3px;
@@ -3491,12 +3664,16 @@ body .mini-grid-headerCell-nowrap
 {
     word-break:break-all;
     
-    padding-top:3px;
-    padding-bottom:5px;
-    padding-top:4px\9;
-    padding-bottom:4px\9;
+    padding-top:4px;
+    padding-bottom:4px;
     overflow:hidden;
 }
+.ie .mini-grid-headerCell-inner
+{
+    padding-top:4px;
+    padding-bottom:5px;
+}
+
 .mini-grid .mini-grid-bottomCell
 {
     
@@ -3568,7 +3745,7 @@ body .mini-grid-deleteRow
     font-size:9pt;
     font-weight:bold;    
     padding:4px;
-    padding-top:6px;
+    padding-top:5px;
     border-bottom-width:1px;
     border-right-width:1px;    
     padding-left:23px;
@@ -3639,6 +3816,18 @@ body .mini-grid-deleteRow
 {
     overflow:hidden;background:#f6f6f6;position:relative;zoom:1;width:100%;
 }
+
+.mini-grid-summaryCell
+{
+    border-bottom-width:0;
+    border-top-width:1px;
+}
+.mini-grid-summaryRow-top .mini-grid-summaryCell
+{
+    border-bottom-width:1px;
+    border-top-width:0px;    
+}
+
 .mini-grid-summaryRow-view
 {
     position:relative;overflow:hidden;z-index:9;width:100%;
@@ -3655,6 +3844,7 @@ body .mini-grid-deleteRow
 .mini-grid-columns-lock
 {
     position:absolute;left:-10px;top:0;width:0px;overflow:hidden;z-index:10;    
+    
 }
 .mini-grid-columns-lock .mini-grid-topRightCell
 {
@@ -3675,6 +3865,11 @@ body .mini-grid-deleteRow
 .mini-grid-rows-lock .mini-grid-emptyText
 {
     visibility:hidden;
+}
+
+.mini-grid-rows-lock .mini-grid-table
+{
+    width:0;
 }
 
 .mini-grid-filterRow-lock
@@ -3836,6 +4031,7 @@ body .mini-grid-row-hover
     display:inline-block;
     width:18px;
     height:20px;    
+    line-height:20px;
     background:no-repeat 50% 50%;  
     outline:none;
     background-image:url(images/tree/collapse.gif);
@@ -3868,8 +4064,7 @@ body .mini-grid-row-hover
     padding-top:0;
     padding-bottom:0;
     z-index:1000000;
-    font-family:Tahoma, Verdana, 宋体;
-    font-size:9pt;
+    
     
     background:#E7EBEF url(images/grid/header.png) repeat-x 0 0;
     border:#A5ACB5 1px solid;    
@@ -3915,11 +4110,20 @@ body .mini-grid-row-hover
 
 
 
+.mini-tree-checkbox,
+.mini-grid-checkbox,
+.mini-grid-radio
+{
+    min-width:13px !important;
+    min-height:13px !important;  
+}
+
 .mini-grid-checkbox,
 .mini-grid-radio
 {
     width:13px;
-    height:13px;    
+    height:13px;  
+    
     overflow:hidden;
     display:block;
     margin:auto;
@@ -3944,6 +4148,31 @@ body .mini-grid-row-hover
      background:url(images/icons/radio.gif) no-repeat 0 -13px;
 }
 
+
+.mini-grid-column-trigger
+{
+    position:absolute;
+    top:0;
+    right:0;
+    width:16px;
+    height:100%;
+    cursor:pointer;
+    
+    display:none;
+    border-left:solid 1px #ccc;
+    text-align:center;
+}
+
+.mini-grid-headerCell:hover .mini-grid-column-trigger,
+.mini-grid-column-open .mini-grid-column-trigger
+{    
+    display:block;
+}
+
+.mini-grid .mini-pager
+{
+    border-width:0;
+}
 .mini-tree .mini-grid-viewport{
     background:none;
 }
@@ -4105,6 +4334,37 @@ body .mini-tree-loading .mini-treegrid-ec-icon
 }
 
 
+
+.mini-tree-nodeshow
+{
+    border:1px solid transparent;
+    padding:0;
+    
+    _padding:1px;
+    _padding-left:2px;
+    _padding-right:3px;
+    _border:0;
+}
+.mini-tree-node-hover .mini-tree-nodeshow
+{
+    padding:0;
+    
+    _padding:0;
+    _padding-left:1px;
+    _padding-right:2px;
+    _border:1px solid #A9ACB5;    
+}
+.mini-tree-selectedNode .mini-tree-nodeshow
+{
+    padding:0;
+    
+    _padding:0;
+    _padding-left:1px;
+    _padding-right:2px;
+    _border:1px solid #A9ACB5;    
+}
+
+
 .mini-tree-treeLine .mini-tree-indent{
     background:transparent url(images/tree/treeline.gif) repeat-y 9px 0px; 
 }
@@ -4236,6 +4496,7 @@ body .mini-tree-showArrows .mini-tree-node-ecicon
 {
     display:inline-block;
     width:16px;height:20px;overflow:hidden;    
+    line-height:20px;
     background-repeat:no-repeat;
     background-position:50% 50%;
     vertical-align:middle;
@@ -4245,6 +4506,12 @@ body .mini-tree-showArrows .mini-tree-node-ecicon
 .mini-tree-selectedNode .mini-tree-radio,.mini-grid-row-selected .mini-tree-radio
 {
     background-image:url(images/tree/radio_checked.gif);
+}
+
+.mini-tree .mini-tree-checkbox,
+.mini-tree .mini-tree-radio
+{
+    line-height:20px;
 }
 
 .mini-tree-checkbox
@@ -4278,8 +4545,11 @@ body .mini-tree-showArrows .mini-tree-node-ecicon
     font-family: Tahoma, Verdana;
     position:relative;
     line-height:24px;
-    height:24px;
+    
+    min-height:24px;
     padding:3px 8px 3px 4px;
+    border:solid 1px #C9C9C9;
+ 
 }
 
 .mini-pager-left
@@ -4313,11 +4583,12 @@ body .mini-tree-showArrows .mini-tree-node-ecicon
     
 }
 
-body .mini-pager-size .mini-buttonedit .mini-buttonedit-border
-{
-    border-color:#ccc;
-}
 
+
+.mini-pager-num
+{
+    line-height:20px;
+}
 body .mini-pager-num
 {    
 	border:1px solid #ccc;
@@ -4328,7 +4599,11 @@ body .mini-pager-num
 	+vertical-align:middle;
 	position:relative;
 	_left:0;_top:-1px;
-	height:16px;
+	height:21px;	
+}
+body .mini-pager .mini-pager-num 
+{
+    padding:0;
 }
 
 .mini-pager-pages
@@ -4348,6 +4623,12 @@ body .mini-pager-num
     font-size: 0;   
     line-height:0px;	    
 }
+
+.mini-pager-size .mini-combobox
+{
+    width:50px;
+}
+
 .mini-pager-index
 {
     vertical-align:middle;
@@ -4419,6 +4700,7 @@ body .mini-pager-num
     cursor:default;
     opacity: .0;-moz-opacity: .0;filter: alpha(opacity=0);
     
+    cursor:pointer;
 }
 .mini-htmlfile .mini-buttonedit-button
 {
@@ -4511,9 +4793,13 @@ body .mini-pager-num
     margin-right:2px;    
     margin-bottom:2px;
 }
+.mini-textboxlist-input
+{
+    font: 9pt "Lucida Grande", Verdana;
+}
 .mini-textboxlist .mini-textboxlist-input
 {
-    border: 0; padding: 0; font: 9pt "Lucida Grande", Verdana;
+    border: 0; padding: 0;
     outline:none;
     width:20px;
     height: 16px;
@@ -4624,4 +4910,43 @@ body .mini-pager-num
     background-color: #f2dede;
     border-color: #eed3d7;
 }    
+
+
+.mini-tabs,.mini-tabs-scrollCt, .mini-tabs-bodys, .mini-tabs-body, .mini-tabs-header, .mini-tabs-header td
+.mini-layout, .mini-layout-border, .mini-layout-region, .mini-layout-region-body, .mini-layout-proxy,
+.mini-splitter, mini-splitter-border, .mini-splitter-pane, .mini-splitter-handler,
+.mini-panel-border, .mini-panel-viewport, .mini-panel-body,
+.mini-textbox-border, .mini-buttonedit-border, .mini-listbox-border, .mini-popup,
+.mini-menu, .mini-menu-border,
+.mini-grid{
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+
+
+.mini-widget, body, 
+.mini-button, .mini-menuitem, .mini-layout-region-header, .mini-panel-header,
+.mini-outlookbar-groupHeader,
+.mini-grid-headerCell, .mini-grid-cell, .mini-grid-columnproxy, .mini-grid-summaryCell, .mini-grid-groupTitle,
+.mini-listbox td,
+.mini-calendar, .mini-calendar-button,
+.mini-tabs, 
+.mini-tree,
+.mini-textbox-input,
+.mini-buttonedit-input,
+.mini-textboxlist-input,
+.mini-textboxlist,
+.mini-pager,
+.mini-checkboxlist table label, .mini-radiobuttonlist table label,
+.mini-checkbox,
+.mini-checkboxlist, .mini-radiobuttonlist, .mini-radiobuttonlist label,
+.mini-layout,
+.mini-calendar, .mini-calendar-menu-month, mini-calendar-date, mini-calendar-menu-year, .mini-calendar-title
+{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:13px;
+}
+
 

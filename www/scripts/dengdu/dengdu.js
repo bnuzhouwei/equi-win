@@ -273,15 +273,15 @@ if (typeof JSON !== "object") { JSON = {} } (function () {
     }
     Dengdu.I18N = (function () {
         var self = {};
-        self.default = "en-US";
-        self.locale = Dengdu.Cookie.get("ASP.NET_Locale") || self.default;
+        self.defaultLanguage = "en-US";
+        self.locale = Dengdu.Cookie.get("ASP.NET_Locale") || self.defaultLanguage;
         self.resources = {};
         self.config = function (locale, dct) {
             self.resources[locale] = $.extend(self.resources[locale] || {}, dct);
         }
         self.t = function (str, lc) {
             var locale = lc || self.locale;
-            var resource = self.resources[locale] || self.resources[self.default] || {};
+            var resource = self.resources[locale] || self.resources[self.defaultLanguage] || {};
             return resource[str] || str;
         }
         $.t = self.t;
